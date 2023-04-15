@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSERT_WEB</title>
+</head>
+<body>
+    <center>
+        <h1> HELLO Webpages table </h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="topic">TOPIC_NAME</label>
+            <select name="topic" id="topic">
+                {% for to in topics %}
+            <option value="{{to}}">{{to.topic_name}}</option>
+            {% endfor %}
+            </select>
+            
+            <br>
+            <br>
+            <label for="name"> name </label>
+            <input type="text" name="name" id="name">
+            <br>
+            <br>
+            <label for="url">url</label>
+            <input type="url" name="url" id="url">
+            <br>
+            <br>
+            <label for="email">email</label>
+            <input type="email" name="email" id="email">
+            <br>
+            <br>
+            <button type="submit">insert_web</button>
+
+        </form>
+    
+    
+    
+    
+    
+    </center>
+    
+</body>
+</html>
